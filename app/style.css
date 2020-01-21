@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.margin {
+    margin: 0;
+}
+
+.bigbox {
+    float: left;
+    width: 35%;
+    height: 100%;
+    border: 4px;
+    border-color: black;
+    background-color: pink;
+    text-align: center;
+}
+
+.enterbtn p{
+    border: 3px solid black;
+    background-color: lightblue;
+    width: 10%;
+    margin: 0 auto;  
+}
+
+.zodiac {
+    float: left;
+    width: 5.41%;
+    max-height: 100%;
+    background-color: orange;
+    border: 0px solid #F25764;
+}
+
+
+
+
