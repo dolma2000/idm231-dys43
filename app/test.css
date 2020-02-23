@@ -1,0 +1,41 @@
+.flexbox {
+    display: flex;
+    height: 100vh;
+}
+
+.flexitems {
+    background-color: blue;
+}
+
+.flexbox p {
+    width: 33.3%;
+    text-align: center;   
+}
+
+#blue { background-color: blue;}
+#pink {background-color: pink;}
+#yellow {background-color: yellow;}
+
+
+
+/* .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: black;
+  }
+  
+  .container:hover .overlay {
+    opacity: 0.2;
+  } */

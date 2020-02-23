@@ -1,36 +1,117 @@
 * {
     box-sizing: border-box;
+    font-family: Quicksand;
 }
 
-.margin {
-    margin: 0;
+.flexbox {
+    display: flex;
+    height: 100vh;
 }
 
-.bigbox {
-    float: left;
-    width: 35%;
+.tarotname {
+    position: relative;
+}
+
+.tarotname:hover .overlay {
+    opacity: 0.2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     height: 100%;
-    border: 4px;
-    border-color: black;
-    background-color: pink;
+    width: 100%;
+    opacity: 0;
+    transition: .2s ease;
+    background-color: darkmagenta;
+}
+  
+#bigbox {
+    width: 5.41%;
     text-align: center;
+    margin-top: 7em;
+    transition: width 0.5s;
 }
 
-.enterbtn p{
-    border: 3px solid black;
-    background-color: lightblue;
+h1 {
+    font-family: 'RedMoonRising';
+    font-size: 6em;
+}
+.inputbox {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inputbox p {
+    margin:0;
+}
+#month, #day {
     width: 10%;
-    margin: 0 auto;  
+}
+
+.birthdaybox {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+#lovers {
+    width: 35.08%;;
+}
+
+.tarotname {
+    width: 5.41%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    transition: width 0.5s; 
 }
 
 .zodiac {
-    float: left;
-    width: 5.41%;
-    max-height: 100%;
-    background-color: orange;
-    border: 0px solid #F25764;
+    text-align: center;
+    line-height: 2.7em;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.zodiac p {
+    font-family: 'RedMoonRising';
 }
 
 
 
+.insidebox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.insidebox h2 {
+    font-family: RedMoonRising;
+    font-size: 5em;
+    margin-bottom: 0.3em;
+}
+.insidebox img {
+    width: 47%;
+}
+.insidebox p {
+    width: 70%;
+    text-align: center;
+    line-height: 1.4em;
+    letter-spacing: 0.05em;
+    padding-top: 1.8em;
+}
 
+
+
+/* ----HOVER SAMPLE---- */
+/* .container {
+    position: relative;
+}
+
+.container:hover .overlay {
+    opacity: 0.2;
+} */
