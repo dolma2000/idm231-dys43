@@ -1,3 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.zodiac {
+  text-align: center;
+  height: 100vh;
+  min-width: 30vw;
+}
+
+
+.zodiacEl img {
+  width: 30%;
+}
+.zodiacEl p {
+  padding: 0 5em;
+}
+#lovers {
+  background-color: lightpink;
+  display: block;
+}
+#emperor {
+  background-color: lightsalmon;
+}
+
+.zodiaclEl {
+  display: block;
+}
+
+
+____________________________________
+/* 
+
 .flexbox {
     display: flex;
     height: 100vh;
@@ -15,7 +52,7 @@
 #blue { background-color: blue;}
 #pink {background-color: pink;}
 #yellow {background-color: yellow;}
-
+ */
 
 
 /* .container {

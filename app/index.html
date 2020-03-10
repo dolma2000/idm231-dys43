@@ -13,47 +13,78 @@
 
 
 <div class="flexbox">
+
+    <!-- <main>
+        <button class="soundtrack" data-sound="star">Sound</button>
+        <button class="soundtrack" data-sound="sound1">Sound</button>
+        <button id="btn-stop-sounds">S T O P</button>
+    </main>
+    <audio id="speakers"></audio> -->
     
-    <div class="tarotname" id="star">
-        <div  class="zodiac"><p>S<br>T<br>A<br>R</p></div>
+    <button class="tarotname soundtrack" data-sound="star" id="star" >
+        <div class="zodiac"><p>S<br>T<br>A<br>R</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Star</h1>
+            <img src="image/star.png" alt="">
+            <p>Your card, The Star, focuses on your optimism. When you wish on the stars, you really believe you can achieve your heart's desires. Your job in this world is to convince others they can too, thereby helping to lead them home in a spiritual sense.</p>
+        </div>
         <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="moon">
-            <div  class="zodiac"><p>M<br>O<br>O<br>N</p></div>
-            <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="emperor">
+    </button>
+    <button class="tarotname soundtrack" data-sound="moon" id="moon">
+        <div class="zodiac"><p>M<br>O<br>O<br>N</p></div>
+        <div class="smallbox" id="moonbox" hidden>
+            <h1>Moon</h1>
+            <img src="image/moon.png" alt="">
+            <p>Like your Tarot card, The Moon, you are a creature of ever-changing moods. You do best when you attune to nature's cycles and use them to refresh your intuitive powers. The Moon rules emotions, which are your strong suit, especially when you use your compassionate nature to help others.</p>
+        </div>
+        <div class="overlay"></div>
+    </button>
+    <button class="tarotname soundtrack" data-sound="emperor" id="emperor" >
            <div  class="zodiac"><p>E<br>M<br>P<br>E<br>R<br>O<br>R</p></div>
-            <!-- <div class="insidebox" id="emperorbox">
-                <h2>Emperor</h2>
-                <img src="image/emperor.png" alt="">
-                <p>Your Tarot card is The Emperor, the guy who will always be there when you need him. This card represents your sign's loyalty and ability to stick by your friends through thick and thin. Like the royal figure on your card, you use your authority and analytical powers to help others and to achieve your goals.</p>
-            </div> -->
+           <div class="smallbox" id="starbox" hidden>
+            <h1>Emperor</h1>
+            <img src="image/emperor.png" alt="">
+            <p>Your Tarot card is The Emperor, the guy who will always be there when you need him. This card represents your sign's loyalty and ability to stick by your friends through thick and thin. Like the royal figure on your card, you use your authority and analytical powers to help others and to achieve your goals.</p>
+        </div>
            <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="hierophant">
-            <div  class="zodiac"><p>H<br>I<br>E<br>R<br>O<br>P<br>H<br>A<br>N<br>T</p></div>
-            <div class="overlay"></div>
-    </div> 
-    <div class="tarotname" id="lovers">      
-            <!-- <div class="zodiac" id="header" ><p>L<br>O<br>V<br>E<br>R<br>S</p></div> -->
-            <div class="insidebox" id="loversbox">
-                <h2>Lovers</h2>
-                <img src="image/lovers.png" alt="">
-                <p>Every Gemini is blessed with a dual nature represented by your Tarot card, The Lovers. Turning points for you often involve making a moral choice between taking the high or low road. This card encourages you to weigh your options carefully and follow the path dictated by your personal integrity.</p>
-            </div>
-            <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="chariot">  
-        <div  class="zodiac"><p>C<br>H<br>A<br>R<br>I<br>O<br>T</p></div>
+    </button>
+    <button class="tarotname" id="hierophant">
+        <div  class="zodiac"><p>H<br>I<br>E<br>R<br>O<br>P<br>H<br>A<br>N<br>T</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Hierophant</h1>
+            <img src="image/hierophant.png" alt="">
+            <p>Your card, The Hierophant, represents learning from knowledgeable teachers who can help you search for higher truths by exploring tried and true traditions. Sifting through the superficial, these learned souls can lead you to the heart of matters where profound insights reveal important life lessons.</p>
+        </div>
         <div class="overlay"></div>
-    </div>
+    </button> 
+    <button class="tarotname" id="lovers">      
+        <div class="zodiac" id="header" ><p>L<br>O<br>V<br>E<br>R<br>S</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Lovers</h1>
+            <img src="image/lovers.png" alt="">
+            <p>Every Gemini is blessed with a dual nature represented by your Tarot card, The Lovers. Turning points for you often involve making a moral choice between taking the high or low road. This card encourages you to weigh your options carefully and follow the path dictated by your personal integrity.</p>
+        </div>
+        <div class="overlay"></div> 
+    </button>
+    <button class="tarotname" id="chariot">  
+        <div  class="zodiac"><p>C<br>H<br>A<br>R<br>I<br>O<br>T</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Chariot</h1>
+            <img src="image/lovers.png" alt="">
+            <p>You stand proud and strong as you guide The Chariot on your card, steering a steady course and rising above life's conflicts. Even though Cancers seek security, you also love the freedom of the open road where you can use your highly-developed intuition to win the race.</p>
+        </div>
+        <div class="overlay"></div>
+    </button>
 
-    <!---------- MAIN SECTION ---------->
+    <!---------- BIGBOX ---------->
 
-    <div id="bigbox">
-        <h1>Tarot Zodiac</h1>
-        <form class=inputbox action="">
+       
+    <div id="bigbox" class="tarotname">
+        <div  class="zodiac"><p>T<br>A<br>R<br>O<br>T<br>C<br>A<br>R<br>D<br></p></div>
+        <form class="inputbox smallbox" action="" hidden>
+            <div class="clip"><img id="topcorner" src="image/top_corner-11.png" alt=""></div>
+            <h1>Tarot<br> Card</h1>
+            <hr>
             <p>Enter Birthday</p>
                <div class="birthdaybox">
                    <input type="number" name="month" id="month">
@@ -62,36 +93,69 @@
                </div>
                <input type="submit" value="Submit" id="submit">
         </form>
+        <div class="overlay"></div>
     </div>
+    
+    <!---------- BIGBOX ---------->
 
-    <div class="tarotname" id="hermit"> 
+    <button class="tarotname" id="hermit"> 
         <div  class="zodiac"><p>H<br>E<br>R<br>M<br>I<br>T</p></div> 
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Hermit</h1>
+            <img src="image/hermit.png" alt="">
+            <p>Like The Hermit, you often need to slow down and go within to focus on your purpose in life. The image on this card -- an old man -- represents a person who is weary of the outer world. When he retreats to explore the mysteries of his inner life, he becomes open and innocent like a child.</p>
+        </div>
         <div class="overlay"></div> 
-    </div> 
-    <div class="tarotname" id="justice">  
+    </button> 
+    <button class="tarotname" id="justice">  
         <div  class="zodiac"><p>J<br>U<br>S<br>T<br>I<br>C<br>E</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Justice</h1>
+            <img src="image/lovers.png" alt="">
+            <p>Justice holds the scales, asking you to weigh your desires against your needs. In order to reach a fair outcome, you must put your feelings and emotions aside. When you reach the light at the end of the tunnel of indecision, you will be able to serve the greater good.</p>
+        </div>
         <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="death"> 
+    </button>
+    <button class="tarotname" id="death"> 
         <div  class="zodiac"><p>D<br>E<br>A<br>T<br>H</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Death</h1>
+            <img src="image/death.png" alt="">
+            <p>Like your Tarot card, Death, you welcome transformation. You often shed your skin like a snake, seeking to release your spirit and be reborn. Because you are able to detach yourself from the ties that bind others, it's easy for you to change your identity, making you the mysterious person everyone wants to figure out.</p>
+        </div>
         <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="strength">
+    </button>
+    <button class="tarotname" id="strength">
         <div  class="zodiac"><p>S<br>T<br>R<br>E<br>N<br>G<br>T<br>H</p></div>  
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Strength</h1>
+            <img src="image/strength.png" alt="">
+            <p>The Strength card represents your physical strength -- like that of the mighty Lion on your card -- as well as your emotional, mental and spiritual prowess. Like the Lion, you are blessed with plenty of courage, which helps you overcome problems and obstacles</p>
+        </div>
         <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="temperance">
+    </button>
+    <button class="tarotname" id="temperance">
         <div  class="zodiac"><p>T<br>E<br>M<br>P<br>E<br>R<br>A<br>N<br>C<br>E</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Temperance</h1>
+            <img src="image/temperance.png" alt="">
+            <p>Like your card, Temperance, you are a gifted mediator, able to find common ground by balancing out judgments with genuine understanding and awareness. Like a steadily-meandering stream, you work your way through whatever difficulties get in the way.</p>
+        </div>
         <div class="overlay"></div>
-    </div>
-    <div class="tarotname" id="devil">
+    </button>
+    <button class="tarotname" id="devil">
         <div  class="zodiac"><p>D<br>E<br>V<br>I<br>L</p></div>
+        <div class="smallbox" id="starbox" hidden>
+            <h1>Devil</h1>
+            <img src="image/lovers.png" alt="">
+            <p>The Devil card encourages you to face your shadow-self in order to gather the knowledge necessary for spiritual transformation. It advises you to reflect on any negativity that has made you doubt yourself, swap it for confidence and hold fast to your highest vision of who you are.</p>
+        </div>
         <div class="overlay"></div>
-    </div>
- 
+    </button>
 </div>
 
-<script src="js.js"></script>
+<audio id="speakers"></audio>
+<script src="main.js"></script>
 </div>
 
 <!---- HOVER SAMPLE ---->

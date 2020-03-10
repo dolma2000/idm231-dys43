@@ -4,3 +4,8 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: Asap;
+    src: url(../Font/Asap-Regular/Asap-Regular.woff) format('woff');
+}

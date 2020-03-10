@@ -3,6 +3,10 @@
     font-family: Quicksand;
 }
 
+
+button {
+    background: none;
+}
 .flexbox {
     display: flex;
     height: 100vh;
@@ -28,42 +32,107 @@
     transition: .2s ease;
     background-color: darkmagenta;
 }
-  
+ 
+.smallbox {
+    margin-top: 2em;
+}
+.smallbox h1 {
+    margin: 0;
+    font-size: 5em;
+    font-weight: normal;
+    letter-spacing: 6px;
+    
+}
+.smallbox img {
+    width: 40%;
+    margin-top: 2em;
+    box-shadow: 0px 0px 20px black;
+}
+.smallbox p {
+    margin-bottom: 3em;
+    padding: 1.5em 0.5em;
+}
 #bigbox {
-    width: 5.41%;
-    text-align: center;
-    margin-top: 7em;
+    background-image: url(image/bg-10.png);
+    background-size: cover;
+    width: 35.08%;
     transition: width 0.5s;
+    color: white;
+}
+.inputbox h1 {
+    font-size: 6em;
+}
+.inputbox p {
+    font-size: 1.2em;
+}
+.inputbox {
+    margin: 0;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+.inputbox h1 {
+    margin: 0;
+    margin-top: -40%;
+    color: white;
+    letter-spacing: 10px;
+    font-weight: normal;
+    line-height: 0.8em;
+}
+.inputbox hr {
+    width: 30%;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 2em;
+}
+.inputbox p {
+    margin:0;
+}
+.clip img{
+    clip-path: inset(50% 50% 0% 0%);
+}
+#topcorner {
+    width: 100%;
+    margin-top: 0;
+    transform: translateY(-50%) translateX(50%);
+}
+.birthdaybox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+}
+.birthdaybox input {
+    border: none;
+    background: rgba(255,255,255, 0.3);
+    box-shadow: 0px 3px 8px rgb(61, 61, 61);
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    font-size: 1.5em;
+    color: white;
+}
+/* .birthdaybox input[type=number] {
+    -moz-appearance: textfield;
+} */
+.birthdaybox p {
+    font-size: 2em;
 }
 
 h1 {
     font-family: 'RedMoonRising';
     font-size: 6em;
 }
-.inputbox {
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.inputbox p {
-    margin:0;
-}
-#month, #day {
-    width: 10%;
-}
 
-.birthdaybox {
-    display: flex;
-    justify-content: center;
-    padding: 3em;
-}
 
-#lovers {
-    width: 35.08%;;
-}
+
+
+
 
 .tarotname {
-    width: 5.41%;
+    min-width: 5.41%;
     border: 1px solid black;
     display: flex;
     align-items: center;
@@ -97,13 +166,7 @@ h1 {
 .insidebox img {
     width: 47%;
 }
-.insidebox p {
-    width: 70%;
-    text-align: center;
-    line-height: 1.4em;
-    letter-spacing: 0.05em;
-    padding-top: 1.8em;
-}
+
 
 
 

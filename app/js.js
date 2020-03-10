@@ -4,10 +4,10 @@ const emperor = document.getElementById('emperor')
 
 // -----TO OPEN AND CLOSE EACH ZODIAC BOX-----//
 function changeWidth (tarotname) {
-    var elements = [...document.getElementsByClassName('tarotname')];
-    var bigbox = document.getElementById('bigbox')
+    const elements = [...document.getElementsByClassName('tarotname')];
+    const bigbox = document.getElementById('bigbox')
     elements.push(bigbox)
-    var exceptThisId = tarotname.id;
+    const exceptThisId = tarotname.id;
     
     elements.forEach(function (element) {
         if (element.id == exceptThisId) {
@@ -19,20 +19,70 @@ function changeWidth (tarotname) {
     });
 }
 
-// -----TO HIDE AND SHOW THE CONTENT WITHIN EACH ZODIAC BOX-----//
-function toggle (insidebox) {
-    var elements = [...document.getElementsByClassName('insidebox')];
-    var exceptThisId = insidebox.id;
 
-    elements.forEach (function (element) {
-        if (element.id==exceptThisId || element.style.display === 'none') {
-            element.style.display = 'block';
-        }
-        else {
+// -----TO HIDE AND SHOW THE CONTENT WITHIN EACH ZODIAC BOX-----//
+function display (smallbox) {
+    const elements = [...document.getElementsByClassName('smallbox')];
+    const specificId = smallbox.id;
+ 
+    elements.forEach(function(element) {
+        if (element.id ==specificId && element.style.display === 'block') {
             element.style.display = 'none';
         }
-    });
+        else {
+            element.style.display = 'block';
+        }
+    })
 }
+
+whic
+
+// function toggle() {
+//     var x = document.getElementById('toggle-div');
+//     if (x.style.display === 'block') {
+//         x.style.display = 'none';
+//     }
+//     else {
+//         x.style.display = 'block';
+//     }
+// };
+
+var tarotnames = [...document.getElementsByClassName('tarotname')];
+tarotnames.push(document.getElementById('bigbox'))
+tarotnames.forEach(function(element) {
+    element.addEventListener('click', function() {
+        changeWidth(element);
+        display(element);
+    });
+});
+
+
+
+// -----TO HIDE AND SHOW THE CONTENT WITHIN EACH ZODIAC BOX-----//
+
+// function toggle() {
+//     var x = document.getElementById(toggle-div);
+//     if (x.style.display === "block") {
+//         x.style.display = 'none';
+//     }
+//     else {
+//         x.style.display = "block";
+// }
+// };
+
+// function toggle (insidebox) {
+//     var elements = [...document.getElementsByClassName('insidebox')];
+//     var exceptThisId = insidebox.id;
+
+//     elements.forEach (function (element) {
+//         if (element.id==exceptThisId || element.style.display === 'none') {
+//             element.style.display = 'block';
+//         }
+//         else {
+//             return false
+//         }
+//     });
+// }
 
 var tarotnames = [...document.getElementsByClassName('tarotname')];
 tarotnames.push(document.getElementById('bigbox'))
