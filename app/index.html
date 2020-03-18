@@ -48,7 +48,7 @@
         </div>
            <div class="overlay"></div>
     </button>
-    <button class="tarotname" id="hierophant">
+    <button class="tarotname soundtrack" data-sound="hierophant" id="hierophant">
         <div  class="zodiac"><p>H<br>I<br>E<br>R<br>O<br>P<br>H<br>A<br>N<br>T</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Hierophant</h1>
@@ -57,7 +57,7 @@
         </div>
         <div class="overlay"></div>
     </button> 
-    <button class="tarotname" id="lovers">      
+    <button class="tarotname soundtrack" data-sound="lovers" id="lovers">      
         <div class="zodiac" id="header" ><p>L<br>O<br>V<br>E<br>R<br>S</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Lovers</h1>
@@ -66,7 +66,7 @@
         </div>
         <div class="overlay"></div> 
     </button>
-    <button class="tarotname" id="chariot">  
+    <button class="tarotname soundtrack" data-sound="chariot" id="chariot">  
         <div  class="zodiac"><p>C<br>H<br>A<br>R<br>I<br>O<br>T</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Chariot</h1>
@@ -81,24 +81,36 @@
        
     <div id="bigbox" class="tarotname">
         <div  class="zodiac"><p>T<br>A<br>R<br>O<br>T<br>C<br>A<br>R<br>D<br></p></div>
-        <form class="inputbox smallbox" action="" hidden>
-            <div class="clip"><img id="topcorner" src="image/top_corner-11.png" alt=""></div>
-            <h1>Tarot<br> Card</h1>
-            <hr>
-            <p>Enter Birthday</p>
-               <div class="birthdaybox">
-                   <input type="number" name="month" id="month">
-                   <p>/</p>
-                   <input type="number" name="day" id="day"> 
-               </div>
-               <input type="submit" value="Submit" id="submit">
-        </form>
+        
+            <form class="inputbox smallbox" id="birthdayForm" action="" hidden>
+
+                <div class="clip"><img id="topcorner" src="image/top_corner-11.png" alt=""></div>
+                <h1>Tarot<br> Card</h1>
+                <hr>
+                <p>Enter Birthday</p>
+
+                    <input
+                        type="date"
+                        name="birthday"
+                        id="birthday"
+                        placeholder="mm/dd/yyyy"
+                        pattern="\d{1,2}/\d{1,2}/\d{4}"
+                        required
+                    />
+
+                <div id="submit">
+                    <input type="submit" value="SUBMIT" /> 
+                </div>
+            
+            </form>
+     
+
         <div class="overlay"></div>
     </div>
     
     <!---------- BIGBOX ---------->
 
-    <button class="tarotname" id="hermit"> 
+    <button class="tarotname soundtrack" data-sound="hermit"  id="hermit"> 
         <div  class="zodiac"><p>H<br>E<br>R<br>M<br>I<br>T</p></div> 
         <div class="smallbox" id="starbox" hidden>
             <h1>Hermit</h1>
@@ -107,7 +119,7 @@
         </div>
         <div class="overlay"></div> 
     </button> 
-    <button class="tarotname" id="justice">  
+    <button class="tarotname soundtrack" data-sound="justice" id="justice">  
         <div  class="zodiac"><p>J<br>U<br>S<br>T<br>I<br>C<br>E</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Justice</h1>
@@ -116,7 +128,7 @@
         </div>
         <div class="overlay"></div>
     </button>
-    <button class="tarotname" id="death"> 
+    <button class="tarotname soundtrack" data-sound="death" id="death"> 
         <div  class="zodiac"><p>D<br>E<br>A<br>T<br>H</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Death</h1>
@@ -125,7 +137,7 @@
         </div>
         <div class="overlay"></div>
     </button>
-    <button class="tarotname" id="strength">
+    <button class="tarotname soundtrack" data-sound="strength" id="strength">
         <div  class="zodiac"><p>S<br>T<br>R<br>E<br>N<br>G<br>T<br>H</p></div>  
         <div class="smallbox" id="starbox" hidden>
             <h1>Strength</h1>
@@ -134,7 +146,7 @@
         </div>
         <div class="overlay"></div>
     </button>
-    <button class="tarotname" id="temperance">
+    <button class="tarotname soundtrack" data-sound="temperance" id="temperance">
         <div  class="zodiac"><p>T<br>E<br>M<br>P<br>E<br>R<br>A<br>N<br>C<br>E</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Temperance</h1>
@@ -143,7 +155,7 @@
         </div>
         <div class="overlay"></div>
     </button>
-    <button class="tarotname" id="devil">
+    <button class="tarotname soundtrack" data-sound="devil" id="devil">
         <div  class="zodiac"><p>D<br>E<br>V<br>I<br>L</p></div>
         <div class="smallbox" id="starbox" hidden>
             <h1>Devil</h1>

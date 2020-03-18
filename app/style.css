@@ -96,36 +96,34 @@ button {
     margin-top: 0;
     transform: translateY(-50%) translateX(50%);
 }
-.birthdaybox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 3em;
-}
-.birthdaybox input {
-    border: none;
-    background: rgba(255,255,255, 0.3);
-    box-shadow: 0px 3px 8px rgb(61, 61, 61);
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 100px;
-    font-size: 1.5em;
-    color: white;
-}
-/* .birthdaybox input[type=number] {
-    -moz-appearance: textfield;
-} */
-.birthdaybox p {
-    font-size: 2em;
-}
+
 
 h1 {
     font-family: 'RedMoonRising';
     font-size: 6em;
 }
 
+#birthday {
+    background:rgba(255,255,255, 0.3);
+    color: white;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 70px;
+    padding: 10px 7px 10px 21px;
+    margin: 0.6em 0 3em;
+    box-shadow: 0px 0px 20px rgb(49, 49, 49);
+}
 
+#submit input{
+    background-color:rgba(255,255,255, 0.0);
+    border: 3px solid white;
+    border-radius: 60px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 20px rgb(37, 37, 37);
+}
 
 
 

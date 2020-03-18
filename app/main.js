@@ -12,10 +12,15 @@ const temperance = document.getElementById('temperance')
 const devil = document.getElementById('devil')
 const bigbox = document.getElementById ('bigbox')
 
+const submit = document.getElementById('submit')
+const birthdayForm = document.getElementById('birthdayForm');
+
 var box = document.getElementById ('bigbox')
 box.getElementsByClassName('zodiac')[0].hidden = true
 box.getElementsByClassName('smallbox')[0].hidden = false
 box.getElementsByClassName('overlay')[0].hidden = true
+
+
 
 function smallbig (classname) {
     box.style.width = '5.41%';
@@ -27,46 +32,72 @@ function smallbig (classname) {
     box.getElementsByClassName('zodiac')[0].hidden = true;
     box.getElementsByClassName('smallbox')[0].hidden =false;
     box.getElementsByClassName('overlay')[0].hidden = true;
+
+    const sound = box.dataset.sound;
+    const speakers = document.getElementById('speakers')
+    speakers.src=`sounds/${sound}.mp3`;
+    speakers.play();
 }
 
-const submit = document.getElementById('submit')
 
-function getCard() {
+const handleBirthdayForm = event => {
     
+    event.preventDefault();
 
-const month = document.getElementById('month').value;
-console.log (document.getElementById('month'));
-const day = document.getElementById('day').value; 
-console.log (document.getElementById('day')); 
-console.log (month); console.log (day);
-if ((month == 1 && day>=20) || (month == 2 && day<=18)) {
-    smallbig(star);
-} else if ((month == 2 && day>=19) || (month == 3 && day<=20)) {
-    smallbig(moon);
-} else if ((month == 3 && day>=21) || (month == 4 && day<=19)) {
-    smallbig(emperor);
-} else if ((month == 4 && day>=20) || (month == 5 && day<=20)) {
-    smallbig(hierophant);
-} else if ((month == 5 && day>=21) || (month == 6 && day<=20)) {
-    smallbig(lovers);
-} else if ((month == 6 && day>=21) || (month == 7 && day<=22)) {
-    smallbig(chariot);
-} else if ((month == 7 && day>=23) || (month == 8 && day<=22)) {
-    smallbig(strenght);
-} else if ((month == 8 && day>=23) || (month == 9 && day<=22)) {
-    smallbig(hermit);
-} else if ((month == 9 && day>=23) || (month == 10 && day<=22)) {
-    smallbig(justice);
-} else if ((month == 10 && day>=23) || (month == 11 && day<=21)) {
-    smallbig(death);
-} else if ((month == 11 && day>=22) || (month == 12 && day<=21)) {
-    smallbig(temperance);
-} else if ((month == 12 && day>=22) || (month == 1 && day<=19)) {
-    smallbig(devil);
-}
+  const birthdayInput = document.getElementById('birthday');
+  const birthdayValue = birthdayInput.value;
+  
+  let month, day;
+
+  console.log('birthdayValue:', birthdayValue);
+
+  if (birthdayValue.includes('/')) {
+    const dateArray = birthdayValue.split('/');
+    month = dateArray[0];
+    day = dateArray[1];
+  } else {
+    const birthday = new Date(`${birthdayValue}T00:00`);
+    month = birthday.getMonth() + 1;
+    day = birthday.getDate();
+  }
+
+  console.log('month: ', month);
+  console.log('day: ', day);
+
+
+    if ((month == 1 && day>=20) || (month == 2 && day<=18)) {
+        smallbig(star);
+    } else if ((month == 2 && day>=19) || (month == 3 && day<=20)) {
+        smallbig(moon);
+    } else if ((month == 3 && day>=21) || (month == 4 && day<=19)) {
+        smallbig(emperor);
+    } else if ((month == 4 && day>=20) || (month == 5 && day<=20)) {
+        smallbig(hierophant);
+    } else if ((month == 5 && day>=21) || (month == 6 && day<=20)) {
+        smallbig(lovers);
+    } else if ((month == 6 && day>=21) || (month == 7 && day<=22)) {
+        smallbig(chariot);
+    } else if ((month == 7 && day>=23) || (month == 8 && day<=22)) {
+        smallbig(strenght);
+    } else if ((month == 8 && day>=23) || (month == 9 && day<=22)) {
+        smallbig(hermit);
+    } else if ((month == 9 && day>=23) || (month == 10 && day<=22)) {
+        smallbig(justice);
+    } else if ((month == 10 && day>=23) || (month == 11 && day<=21)) {
+        smallbig(death);
+    } else if ((month == 11 && day>=22) || (month == 12 && day<=21)) {
+        smallbig(temperance);
+    } else if ((month == 12 && day>=22) || (month == 1 && day<=19)) {
+        smallbig(devil);
 }
 
-submit.addEventListener('click', getCard())
+};
+
+birthdayForm.addEventListener('submit', handleBirthdayForm);
+
+
+
+
 
 const soundButtons = document.querySelectorAll('.soundtrack');
 const speakers = document.getElementById('speakers')
