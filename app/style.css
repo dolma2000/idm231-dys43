@@ -1,12 +1,78 @@
 * {
-    box-sizing: border-box;
     font-family: Quicksand;
+    padding: 0;
+    margin: 0;
+}
+html {
+	box-sizing: border-box;
+    font-size: 100%;
+    overflow-y: hidden;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* ____________________________________ */
+
+#star {
+    background-image: url(image/star_bg.svg);
+    background-size: cover;
+}
+#moon {
+    background-image: url(image/moon_bg.svg);
+    background-size: cover;
+}
+#emperor {
+    background-image: url(image/emperor_bg.svg);
+    background-size: cover;
+}
+#hierophant {
+    background-image: url(image/hierophant_bg.svg);
+    background-size: cover;
+}
+#lovers {
+    background-image: url(image/lovers_bg.svg);
+    background-size: cover;
+}
+#chariot {
+    background-image: url(image/chariot_bg.svg);
+    background-size: cover;
+}
+#strength {
+    background-image: url(image/strength_bg.svg);
+    background-size: cover;
+}
+#hermit {
+    background-image: url(image/hermit_bg.svg);
+    background-size: cover;
+}
+#justice {
+    background-image: url(image/justice_bg.svg);
+    background-size: cover;
+}
+#death {
+    background-image: url(image/death_bg.svg);
+    background-size: cover;
+}
+#temperance {
+    background-image: url(image/temperance_bg.svg);
+    background-size: cover;
+}
+#devil {
+    background-image: url(image/devil_bg.svg);
+    background-size: cover;
+}
+
+#special{
+    font-size: 2em;
+}
+#special p {
+    color: white;
 }
 
 
-button {
-    background: none;
-}
 .flexbox {
     display: flex;
     height: 100vh;
@@ -17,7 +83,13 @@ button {
 }
 
 .tarotname:hover .overlay {
-    opacity: 0.2;
+    opacity: 0.5;
+}
+.tarotname:hover .zodiac p {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+    color: #250072;
+    font-weight: bold;
 }
 
 .overlay {
@@ -30,7 +102,8 @@ button {
     width: 100%;
     opacity: 0;
     transition: .2s ease;
-    background-color: darkmagenta;
+    background-color: white;
+    z-index: 0;
 }
  
 .smallbox {
@@ -41,19 +114,22 @@ button {
     font-size: 5em;
     font-weight: normal;
     letter-spacing: 6px;
-    
+    color: white;
 }
 .smallbox img {
     width: 40%;
-    margin-top: 2em;
-    box-shadow: 0px 0px 20px black;
+    margin: 1.5em 0 1.8em;
+    box-shadow: 0px 0px 40px rgb(53, 53, 53);
+    border-radius: 15px;
 }
 .smallbox p {
-    margin-bottom: 3em;
-    padding: 1.5em 0.5em;
+    width: 100%;
+    padding: 0em 5em;
+    line-height: 2em;
+    color: white;
 }
 #bigbox {
-    background-image: url(image/bg-10.png);
+    background-image: url(image/homepage_bg.svg);
     background-size: cover;
     width: 35.08%;
     transition: width 0.5s;
@@ -66,36 +142,28 @@ button {
     font-size: 1.2em;
 }
 .inputbox {
-    margin: 0;
+    margin-top: 0vh;
     text-align: center;
-    height: 100vh;
+
     width: 100%;
 }
 .inputbox h1 {
-    margin: 0;
-    margin-top: -40%;
     color: white;
     letter-spacing: 10px;
     font-weight: normal;
     line-height: 0.8em;
 }
 .inputbox hr {
-    width: 30%;
+    width: 100px;
     border: 1px solid white;
     border-radius: 10px;
-    margin-top: 2em;
+    margin: 2em auto;
+    text-align: center;
 }
 .inputbox p {
     margin:0;
 }
-.clip img{
-    clip-path: inset(50% 50% 0% 0%);
-}
-#topcorner {
-    width: 100%;
-    margin-top: 0;
-    transform: translateY(-50%) translateX(50%);
-}
+
 
 
 h1 {
@@ -115,7 +183,7 @@ h1 {
 }
 
 #submit input{
-    background-color:rgba(255,255,255, 0.0);
+    background-color:rgba(255, 255, 255, 0.0);
     border: 3px solid white;
     border-radius: 60px;
     padding: 10px 15px;
@@ -123,18 +191,24 @@ h1 {
     font-size: 1.3em;
     letter-spacing: 2px;
     box-shadow: 0px 0px 20px rgb(37, 37, 37);
+    transition: 0.35s ease-in-out ;
 }
-
-
-
-
+#submit input:hover {
+    background-color:rgba(255, 255, 255, 1);
+    color:#5A00B0;
+    font-weight: bold;
+    transition: 0.35s ease-in-out ;
+    transform: scale(1.05);
+    
+}
 
 .tarotname {
     min-width: 5.41%;
-    border: 1px solid black;
+    border: 1px solid white;
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center; 
+    flex-direction: column; 
     transition: width 0.5s; 
 }
 
@@ -146,6 +220,10 @@ h1 {
 }
 .zodiac p {
     font-family: 'RedMoonRising';
+    position: relative;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+    color: rgba(255, 255, 255, 0.4)
 }
 
 
@@ -165,14 +243,111 @@ h1 {
     width: 47%;
 }
 
+/* ____________________________________________ */
 
 
 
-/* ----HOVER SAMPLE---- */
-/* .container {
-    position: relative;
+
+.help  {
+    border: 2px solid white;
+    border-radius: 50px;
+
+    padding: 8px 14px;
+    margin: 4em 50vw;
+    text-align: center;
+
+
+    color: white;
+    box-shadow: 0px 0px 20px rgb(37, 37, 37);
+    background: none;
+    
+    transition: 0.35s ease-in-out;   
+}
+.help:hover {
+    background-color: #910BB9;
+    transition: 0.35s ease-in-out ;
+    cursor: pointer;
 }
 
-.container:hover .overlay {
-    opacity: 0.2;
-} */
+.modal {
+	height: 100vh;
+	width: 100vw;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.modal .blanket {
+	background-color: rgba(0, 0, 0, .6);
+    filter: blur(8px);
+	height: 100vh;
+	width: 100vw;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.modal-content {
+    padding: 4em 0;
+}
+.modal-content p {
+    color: white;
+    width: 38vw;
+    margin: 0 auto;
+
+}
+
+.modal-body {
+    border-radius: 50px;
+    border: 10px solid white;
+    background-color: rgba(0, 0, 0, .8);	
+	
+	max-width: 37vw;
+
+	position: relative;
+	z-index: 101;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 1rem;
+	font-weight: 300;
+	text-align: center;
+}
+#btn-modal-close {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 2px solid white;
+    border-radius: 50px;
+
+    padding: 8px 14px;
+    margin: 2em 50vw 0;
+    text-align: center;
+    
+
+    color: white;
+    box-shadow: 0px 0px 20px rgba(37, 37, 37, 0.3);
+    background: none;
+    
+    transition: 0.35s ease-in-out;
+}
+#btn-modal-close:hover {
+        background-color: #910BB9;
+        transition: 0.35s ease-in-out ;
+        cursor: pointer;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+

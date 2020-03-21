@@ -112,6 +112,23 @@ soundButtons.forEach(button => {
 
 
 
+
+
+const btnModalOpen = document.getElementById('btn-modal-open');
+const btnModalClose = document.getElementById('btn-modal-close');
+
+const openModal = () => {
+  modal.hidden = false;
+};
+
+const closeModal = () => {
+  modal.hidden = true;
+};
+
+btnModalOpen.addEventListener('click', openModal, false);
+btnModalClose.addEventListener('click', closeModal, false);
+
+
 star.addEventListener('click', function() {smallbig(star)});
 moon.addEventListener('click', function() {smallbig(moon)});
 emperor.addEventListener('click', function() {smallbig(emperor)});
